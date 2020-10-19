@@ -30,8 +30,8 @@
   export let width: string = "100%"; // null for 100, else integer, used as percent
   export let options: any = {}; // Object
 
-  let element: HTMLElement | null = null; // bind this element to variable
-  let editor: ace.Editor = null;
+  let element: HTMLElement; // bind this element to variable
+  let editor: ace.Editor;
   let contentBackup: string = "";
 
   onDestroy(() => {
@@ -59,7 +59,7 @@
   $: watchMode(lang);
   function watchMode(newOption: any) {
     if (editor) {
-      editor.getSession().setMode("ace/mode/" + lang);
+      editor.getSession().setMode("ace/mode/" + newOption);
     }
   }
 
