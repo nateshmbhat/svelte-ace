@@ -46,5 +46,6 @@
   "bugs": {
     "url": "https://github.com/nateshmbhat/svelte-ace/issues"
   },
-  "homepage": "https://github.com/nateshmbhat/svelte-ace-editor#readme"
+  "homepage": "https://github.com/nateshmbhat/svelte-ace-editor#readme",
+  "types" :"@types/index.d.ts"
 }

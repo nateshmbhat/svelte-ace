@@ -6,17 +6,17 @@
   const dispatch = createEventDispatcher<{
     init: ace.Editor;
     input: string;
-    onSelectionChange: any;
-    onBlur: void;
-    onChangeMode: any;
-    onCommandKey: { err: any; hashId: any; keyCode: any };
-    onCopy: void;
-    onCursorChange: void;
-    onCut: void;
-    onDocumentChange: any;
-    onFocus: void;
-    onPaste: string;
-    onTextInput: string;
+    selectionChange : any;
+    blur : void;
+    changeMode : any;
+    commandKey : { err: any; hashId: any; keyCode: any };
+    copy : void;
+    cursorChange : void;
+    cut : void;
+    documentChange : any;
+    focus : void;
+    paste : string;
+    textInput : string;
   }>();
 
   /**
@@ -109,18 +109,18 @@
   }
 
   function setEventCallBacks() {
-    editor.onBlur = () => dispatch("onBlur");
-    editor.onChangeMode = (err) => dispatch("onChangeMode", err);
+    editor.onBlur = () => dispatch("blur");
+    editor.onChangeMode = (err) => dispatch("changeMode", err);
     editor.onCommandKey = (err, hashId, keyCode) =>
-      dispatch("onCommandKey", { err, hashId, keyCode });
-    editor.onCopy = () => dispatch("onCopy");
-    editor.onCursorChange = () => dispatch("onCursorChange");
-    editor.onCut = () => dispatch("onCut");
-    editor.onDocumentChange = (err) => dispatch("onDocumentChange", err);
-    editor.onFocus = () => dispatch("onFocus");
-    editor.onPaste = (text) => dispatch("onPaste", text);
-    editor.onSelectionChange = (err) => dispatch("onSelectionChange", err);
-    editor.onTextInput = (text) => dispatch("onTextInput", text);
+      dispatch("commandKey", { err, hashId, keyCode });
+    editor.onCopy = () => dispatch("copy");
+    editor.onCursorChange = () => dispatch("cursorChange");
+    editor.onCut = () => dispatch("cut");
+    editor.onDocumentChange = (err) => dispatch("documentChange", err);
+    editor.onFocus = () => dispatch("focus");
+    editor.onPaste = (text) => dispatch("paste", text);
+    editor.onSelectionChange = (err) => dispatch("selectionChange", err);
+    editor.onTextInput = (text) => dispatch("textInput", text);
 
     editor.on("change", function () {
       const content = editor.getValue();
