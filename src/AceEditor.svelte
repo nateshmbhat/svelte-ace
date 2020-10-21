@@ -13,7 +13,7 @@
     copy : void;
     cursorChange : void;
     cut : void;
-    documentChange : any;
+    documentChange : {data:any};
     focus : void;
     paste : string;
     textInput : string;
@@ -23,8 +23,8 @@
    * translation of vue component to svelte:
    * @link https://github.com/chairuosen/vue2-ace-editor/blob/91051422b36482eaf94271f1a263afa4b998f099/index.js
    **/
-  export let value: string; // String, required
-  export let lang: string; // String
+  export let value: string =''; // String, required
+  export let lang: string = 'json'; // String
   export let theme: string; // String
   export let height: string = "100%"; // null for 100, else integer, used as percent
   export let width: string = "100%"; // null for 100, else integer, used as percent
@@ -110,16 +110,16 @@
 
   function setEventCallBacks() {
     editor.onBlur = () => dispatch("blur");
-    editor.onChangeMode = (err) => dispatch("changeMode", err);
+    editor.onChangeMode = (obj) => dispatch("changeMode", obj);
     editor.onCommandKey = (err, hashId, keyCode) =>
       dispatch("commandKey", { err, hashId, keyCode });
     editor.onCopy = () => dispatch("copy");
     editor.onCursorChange = () => dispatch("cursorChange");
     editor.onCut = () => dispatch("cut");
-    editor.onDocumentChange = (err) => dispatch("documentChange", err);
+    editor.onDocumentChange = (obj:{data:any}) => dispatch("documentChange", obj);
     editor.onFocus = () => dispatch("focus");
     editor.onPaste = (text) => dispatch("paste", text);
-    editor.onSelectionChange = (err) => dispatch("selectionChange", err);
+    editor.onSelectionChange = (obj) => dispatch("selectionChange", obj);
     editor.onTextInput = (text) => dispatch("textInput", text);
 
     editor.on("change", function () {

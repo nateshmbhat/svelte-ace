@@ -21,12 +21,12 @@ export declare class SvelteComponent<Props = {}> {
 }
 
 interface AceEditorProps {
-  value: string; // String, required
-  lang: string; // String
-  theme: string; // String
-  height: string; // null for 100, else integer, used as percent
-  width: string; // null for 100, else integer, used as percent
-  options: any; // Ob
+  value?: string; // String, required
+  lang?: string; // String
+  theme?: string; // String
+  height?: string; // null for 100, else integer, used as percent
+  width?: string; // null for 100, else integer, used as percent
+  options?: any; // Ob
 }
 
 declare class AceEditor extends SvelteComponent<AceEditorProps> {}

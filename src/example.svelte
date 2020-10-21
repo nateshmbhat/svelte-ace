@@ -1,17 +1,3 @@
-# svelte-ace
-
-<h2>Ace Editor for Svelte with TypeScript support</h2>
-<br>
-
-
-### Install : 
-```
-npm i svelte-ace
-```
-
-
-### Usage : 
-```svelte
 <script>
   import AceEditor from "./AceEditor.svelte";
   let text = "";
@@ -33,5 +19,3 @@ npm i svelte-ace
   on:blur={() => console.log('blur')}
   lang={'json'}
   bind:value={text} />
-
-```

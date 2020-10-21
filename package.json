@@ -1,10 +1,10 @@
 {
   "name": "svelte-ace",
   "description": "Svelte Ace Editor component with complete TypeScript support",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
-  "svelte": "src/index.ts",
+  "svelte": "src/index.js",
   "author": "Natesh Bhat",
   "scripts": {
     "dev": "rollup -c -w",
@@ -46,6 +46,6 @@
   "bugs": {
     "url": "https://github.com/nateshmbhat/svelte-ace/issues"
   },
-  "homepage": "https://github.com/nateshmbhat/svelte-ace-editor#readme",
+  "homepage": "https://github.com/nateshmbhat/svelte-ace#readme",
   "types" :"@types/index.d.ts"
 }
