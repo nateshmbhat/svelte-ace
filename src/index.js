@@ -1,1 +1,1 @@
-export { default as AceEditor , default } from './AceEditor.svelte';
+export {default as AceEditor} from './AceEditor.svelte';

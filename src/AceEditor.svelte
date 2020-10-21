@@ -6,26 +6,26 @@
   const dispatch = createEventDispatcher<{
     init: ace.Editor;
     input: string;
-    selectionChange : any;
-    blur : void;
-    changeMode : any;
-    commandKey : { err: any; hashId: any; keyCode: any };
-    copy : void;
-    cursorChange : void;
-    cut : void;
-    documentChange : {data:any};
-    focus : void;
-    paste : string;
-    textInput : string;
+    selectionChange: any;
+    blur: void;
+    changeMode: any;
+    commandKey: { err: any; hashId: any; keyCode: any };
+    copy: void;
+    cursorChange: void;
+    cut: void;
+    documentChange: { data: any };
+    focus: void;
+    paste: string;
+    textInput: string;
   }>();
 
   /**
    * translation of vue component to svelte:
    * @link https://github.com/chairuosen/vue2-ace-editor/blob/91051422b36482eaf94271f1a263afa4b998f099/index.js
    **/
-  export let value: string =''; // String, required
-  export let lang: string = 'json'; // String
-  export let theme: string; // String
+  export let value: string = ""; // String, required
+  export let lang: string = "json"; // String
+  export let theme: string = "chrome"; // String
   export let height: string = "100%"; // null for 100, else integer, used as percent
   export let width: string = "100%"; // null for 100, else integer, used as percent
   export let options: any = {}; // Object
@@ -33,6 +33,12 @@
   let element: HTMLElement; // bind this element to variable
   let editor: ace.Editor;
   let contentBackup: string = "";
+
+  const requireEditorPlugins = () => {
+    require(`brace/mode/${lang}`);
+    require(`brace/theme/${theme}`);
+  };
+  requireEditorPlugins();
 
   onDestroy(() => {
     if (editor) {
@@ -116,7 +122,8 @@
     editor.onCopy = () => dispatch("copy");
     editor.onCursorChange = () => dispatch("cursorChange");
     editor.onCut = () => dispatch("cut");
-    editor.onDocumentChange = (obj:{data:any}) => dispatch("documentChange", obj);
+    editor.onDocumentChange = (obj: { data: any }) =>
+      dispatch("documentChange", obj);
     editor.onFocus = () => dispatch("focus");
     editor.onPaste = (text) => dispatch("paste", text);
     editor.onSelectionChange = (obj) => dispatch("selectionChange", obj);

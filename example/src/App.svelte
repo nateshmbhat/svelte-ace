@@ -1,5 +1,5 @@
 <script>
-  import AceEditor from "svelte-ace";
+  import {AceEditor} from "svelte-ace";
   let text = "";
 </script>
 
