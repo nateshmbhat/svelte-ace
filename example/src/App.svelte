@@ -20,6 +20,6 @@
   on:commandKey={(error, hashId, keyCode) => console.log(`${error}, ${hashId}, ${keyCode}`)}
   on:changeMode={(obj) => console.log(`change mode : ${obj}`)}
   on:blur={() => console.log('blur')}
-  lang={'json'}
+  lang='json'
   theme='chrome'
   value={text} />
