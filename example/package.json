@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "sirv-cli": "^1.0.0",
-    "svelte-ace": "../"
+    "svelte-ace": ".."
   }
 }

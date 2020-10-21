@@ -16,7 +16,6 @@
     documentChange: { data: any };
     focus: void;
     paste: string;
-    textInput: string;
   }>();
 
   /**
@@ -34,10 +33,7 @@
   let editor: ace.Editor;
   let contentBackup: string = "";
 
-  const requireEditorPlugins = () => {
-    require(`brace/mode/${lang}`);
-    require(`brace/theme/${theme}`);
-  };
+  const requireEditorPlugins = () => {};
   requireEditorPlugins();
 
   onDestroy(() => {
@@ -127,8 +123,6 @@
     editor.onFocus = () => dispatch("focus");
     editor.onPaste = (text) => dispatch("paste", text);
     editor.onSelectionChange = (obj) => dispatch("selectionChange", obj);
-    editor.onTextInput = (text) => dispatch("textInput", text);
-
     editor.on("change", function () {
       const content = editor.getValue();
       dispatch("input", content);

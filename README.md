@@ -13,15 +13,18 @@ npm i svelte-ace
 ### Usage : 
 ```svelte
 <script>
-  import AceEditor from "./AceEditor.svelte";
+  import { AceEditor } from "svelte-ace";
+  import "brace/mode/json";
+  import "brace/theme/chrome";
+  
   let text = "";
 </script>
 
 <AceEditor
-  on:textInput={(text) => console.log('text : ' + text)}
+  on:textInput={(textString) => (text = textString)}
   on:selectionChange={(obj) => console.log(obj)}
-  on:paste={(text) => console.log(text)}
-  on:input={(text) => console.log(text)}
+  on:paste={(text) => console.log('paste : ' + text)}
+  on:input={(text) => console.log('input : ' + text)}
   on:focus={() => console.log('focus')}
   on:documentChange={(obj) => console.log(`document change : ${obj}`)}
   on:cut={() => console.log('cursor change')}
@@ -32,6 +35,8 @@ npm i svelte-ace
   on:changeMode={(obj) => console.log(`change mode : ${obj}`)}
   on:blur={() => console.log('blur')}
   lang={'json'}
-  bind:value={text} />
+  theme='chrome'
+  value={text} />
+
 
 ```

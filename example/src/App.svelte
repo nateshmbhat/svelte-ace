@@ -1,12 +1,15 @@
 <script>
-  import {AceEditor} from "svelte-ace";
+  import { AceEditor } from "svelte-ace";
+  import "brace/mode/json";
+  import "brace/theme/chrome";
+  
   let text = "";
 </script>
 
 <AceEditor
-  on:textInput={(textString) => text=textString}
+  on:textInput={(textString) => (text = textString)}
   on:selectionChange={(obj) => console.log(obj)}
-  on:paste={(text) => console.log('paste : '+text)}
+  on:paste={(text) => console.log('paste : ' + text)}
   on:input={(text) => console.log('input : ' + text)}
   on:focus={() => console.log('focus')}
   on:documentChange={(obj) => console.log(`document change : ${obj}`)}
@@ -18,4 +21,5 @@
   on:changeMode={(obj) => console.log(`change mode : ${obj}`)}
   on:blur={() => console.log('blur')}
   lang={'json'}
+  theme='chrome'
   value={text} />
