@@ -24,6 +24,9 @@ jobs:
           node-version: '12'
           
       - run: npm install
+      - run: |
+          cd example
+          npm install
 
       - uses: JS-DevTools/npm-publish@v1
         with:
