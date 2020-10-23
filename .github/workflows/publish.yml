@@ -22,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
+          
+      - run: npm install
 
       - uses: JS-DevTools/npm-publish@v1
         with:
