@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="assets/svelte-icon.png" height="130px">
-  <img src="assets/code-icon.png" height="130px">
+  <img src="./assets/svelte-icon.png" height="130px">
+  <img src="./assets/code-icon.png" height="130px">
 </p>
 <h1 align="center">svelte-ace</h1>
 <h2 align="center">Ace Editor for Svelte with TypeScript support</h2>
