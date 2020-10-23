@@ -42,3 +42,6 @@ npm i svelte-ace
   value={text} />
 
 ```
+
+### Links : 
+https://www.npmjs.com/package/svelte-ace

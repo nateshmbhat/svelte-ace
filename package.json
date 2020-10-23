@@ -1,7 +1,7 @@
 {
   "name": "svelte-ace",
   "description": "Svelte Ace Editor component with complete TypeScript support",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "svelte": "src/index.js",
