@@ -56,3 +56,12 @@ npm i svelte-ace
 - NPM  : [npmjs/svelte-ace](https://www.npmjs.com/package/svelte-ace)
 
 - Home : [github/svelte-ace](https://github.com/nateshmbhat/svelte-ace)
+
+<br>
+
+---
+
+## Explore
+- Check out my [svelte-electron-typescript](https://github.com/nateshmbhat/svelte-electron-ts-starter) starter pack.
+
+- Check out my [electron-react-typescript](https://github.com/nateshmbhat/electron-react-ts-starter) starter pack.
