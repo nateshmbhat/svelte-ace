@@ -1,6 +1,7 @@
 <p align="center">
   <img src="./assets/icon.png" height="130px">
 </p>
+
 <h1 align="center">svelte-ace</h1>
 <h2 align="center">Ace Editor for Svelte with TypeScript support</h2>
 
@@ -51,4 +52,7 @@ npm i svelte-ace
 ```
 
 ### Links : 
-https://www.npmjs.com/package/svelte-ace
+
+- NPM  : [npmjs/svelte-ace](https://www.npmjs.com/package/svelte-ace)
+
+- Home : [github/svelte-ace](https://github.com/nateshmbhat/svelte-ace)
