@@ -1,7 +1,7 @@
 {
   "name": "svelte-ace",
   "description": "Svelte Ace Editor component with complete TypeScript support",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "svelte": "src/index.js",
@@ -27,6 +27,14 @@
     "tslib": "^2.0.0",
     "sirv-cli": "^1.0.0",
     "@tsconfig/svelte": "^1.0.0"
+  },
+  "files": [
+    "dist",
+    "src",
+    "@types"
+  ],
+  "peerDependencies": {
+    "svelte": ">=3.28.0"
   },
   "license": "MIT",
   "dependencies": {
