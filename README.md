@@ -13,7 +13,7 @@
 
 <br>
 
-Get proper typescript type completions for ace editor in Svelte for both ts and js.
+Get proper typescript type completions for ace editor in Svelte.
 
 ### Install :
 
@@ -24,7 +24,7 @@ npm i svelte-ace
 ### Usage :
 
 ```svelte
-<script lang="ts"> // works without ts too
+<script lang="ts">
   import { AceEditor } from "svelte-ace";
   import "brace/mode/json";
   import "brace/theme/chrome";
