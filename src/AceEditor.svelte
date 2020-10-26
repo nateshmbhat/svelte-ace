@@ -2,7 +2,7 @@
   import { createEventDispatcher, tick, onMount, onDestroy } from "svelte";
   import * as ace from "brace";
   import "brace/ext/emmet";
-
+  const EDITOR_ID = "svelte-ace-editor-div:828737"
   const dispatch = createEventDispatcher<{
     init: ace.Editor;
     input: string;
@@ -29,7 +29,6 @@
   export let width: string = "100%"; // null for 100, else integer, used as percent
   export let options: any = {}; // Object
 
-  let element: HTMLElement; // bind this element to variable
   let editor: ace.Editor;
   let contentBackup: string = "";
 
@@ -87,7 +86,7 @@
     lang = lang || "text";
     theme = theme || "chrome";
 
-    editor = ace.edit(element);
+    editor = ace.edit(EDITOR_ID);
 
     dispatch("init", editor);
     editor.$blockScrolling = Infinity;
@@ -131,4 +130,4 @@
   }
 </script>
 
-<div bind:this={element} style="width:{px(width)};height:{px(height)}" />
+<div id={EDITOR_ID} style="width:{px(width)};height:{px(height)}" />
