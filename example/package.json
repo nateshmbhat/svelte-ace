@@ -20,10 +20,9 @@
     "@rollup/plugin-typescript": "^6.0.0",
     "typescript": "^3.9.3",
     "tslib": "^2.0.0",
-    "@tsconfig/svelte": "^1.0.0"
+    "@tsconfig/svelte": "^1.0.0",
+    "svelte-ace": "..",
+    "sirv-cli": "^1.0.0"
   },
-  "dependencies": {
-    "sirv-cli": "^1.0.0",
-    "svelte-ace": ".."
-  }
+  "dependencies": {}
 }
