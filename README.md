@@ -24,7 +24,7 @@ npm i svelte-ace
 
 ### Usage :
 
-```svelte
+```
 <script lang="ts">
   import { AceEditor } from "svelte-ace";
   import "brace/mode/json";
@@ -45,10 +45,11 @@ npm i svelte-ace
   on:commandKey={(obj) => console.log(obj.detail)}
   on:changeMode={(obj) => console.log(`change mode : ${obj.detail}`)}
   on:blur={() => console.log('blur')}
+  width='100%'
+  height='300px'
   lang="json"
   theme="chrome"
   value={text} />
-
 ```
 
 ### Links : 
