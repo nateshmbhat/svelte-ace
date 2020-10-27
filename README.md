@@ -24,7 +24,7 @@ npm i svelte-ace
 
 ### Usage :
 
-```
+```svelte
 <script lang="ts">
   import { AceEditor } from "svelte-ace";
   import "brace/mode/json";
