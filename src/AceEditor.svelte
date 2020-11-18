@@ -2,7 +2,7 @@
   import { createEventDispatcher, tick, onMount, onDestroy } from "svelte";
   import * as ace from "brace";
   import "brace/ext/emmet";
-  const EDITOR_ID = "svelte-ace-editor-div:828737"
+  const EDITOR_ID = `svelte-ace-editor-div:${Math.floor(Math.random() * 10000000000)}`;
   const dispatch = createEventDispatcher<{
     init: ace.Editor;
     input: string;
@@ -124,6 +124,7 @@
     editor.onSelectionChange = (obj) => dispatch("selectionChange", obj);
     editor.on("change", function () {
       const content = editor.getValue();
+      value = content;
       dispatch("input", content);
       contentBackup = content;
     });
