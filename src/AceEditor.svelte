@@ -2,7 +2,9 @@
   import { createEventDispatcher, tick, onMount, onDestroy } from "svelte";
   import * as ace from "brace";
   import "brace/ext/emmet";
-  const EDITOR_ID = `svelte-ace-editor-div:${Math.floor(Math.random() * 10000000000)}`;
+  const EDITOR_ID = `svelte-ace-editor-div:${Math.floor(
+    Math.random() * 10000000000
+  )}`;
   const dispatch = createEventDispatcher<{
     init: ace.Editor;
     input: string;
@@ -131,4 +133,6 @@
   }
 </script>
 
-<div id={EDITOR_ID} style="width:{px(width)};height:{px(height)}" />
+<div>
+  <div id={EDITOR_ID} style="width:{px(width)};height:{px(height)}" />
+</div>
