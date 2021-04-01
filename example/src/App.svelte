@@ -4,7 +4,7 @@
   import "brace/theme/chrome";
 
   let text = "";
-  </script>
+</script>
 
 <AceEditor
   on:selectionChange={(obj) => console.log(obj.detail)}
@@ -19,8 +19,9 @@
   on:commandKey={(obj) => console.log(obj.detail)}
   on:changeMode={(obj) => console.log(`change mode : ${obj.detail}`)}
   on:blur={() => console.log('blur')}
-  width='100%'
-  height='300px'
+  width="100%"
+  height="500px"
   lang="json"
   theme="chrome"
-  value={text} />
+  value={text}
+/>
