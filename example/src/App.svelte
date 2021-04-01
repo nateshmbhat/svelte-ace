@@ -4,7 +4,7 @@
   import "brace/theme/chrome";
 
   let text = "";
-</script>
+  </script>
 
 <AceEditor
   on:selectionChange={(obj) => console.log(obj.detail)}
