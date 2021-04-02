@@ -15,7 +15,8 @@
 
 <br>
 
-Get proper typescript type completions for ace editor in Svelte.
+
+### Get proper typescript type completions for ace editor in Svelte.
 
 ### Install :
 
