@@ -133,6 +133,6 @@
   }
 </script>
 
-<div>
+<div style="width:{px(width)};height:{px(height)}">
   <div id={EDITOR_ID} style="width:{px(width)};height:{px(height)}" />
 </div>
