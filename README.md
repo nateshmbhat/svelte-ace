@@ -5,7 +5,6 @@
 <h1 align="center">svelte-ace</h1>
 <h2 align="center">Ace Editor for Svelte with TypeScript support</h2>
 
-![npm](https://img.shields.io/npm/dw/svelte-ace?style=for-the-badge)
 ![npm](https://img.shields.io/npm/v/svelte-ace)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nateshmbhat/svelte-ace/publish?label=Workflow)
 [![GitHub license](https://img.shields.io/github/license/nateshmbhat/svelte-ace)](https://github.com/nateshmbhat/svelte-ace/blob/main/LICENSE)
