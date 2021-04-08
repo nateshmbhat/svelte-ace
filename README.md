@@ -7,7 +7,6 @@
 
 ![npm](https://img.shields.io/npm/dw/svelte-ace?style=for-the-badge)
 ![npm](https://img.shields.io/npm/v/svelte-ace)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nateshmbhat/svelte-ace/publish?label=Workflow)
 [![GitHub license](https://img.shields.io/github/license/nateshmbhat/svelte-ace)](https://github.com/nateshmbhat/svelte-ace/blob/main/LICENSE)
 ![GitHub top language](https://img.shields.io/github/languages/top/nateshmbhat/svelte-ace)
 [![](https://img.shields.io/badge/author-nateshmbhat-green.svg)](https://github.com/nateshmbhat)
