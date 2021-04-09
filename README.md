@@ -5,15 +5,17 @@
 <h1 align="center">svelte-ace</h1>
 <h2 align="center">Ace Editor for Svelte with TypeScript support</h2>
 
-![npm](https://img.shields.io/npm/dw/svelte-ace?style=for-the-badge)
-![npm](https://img.shields.io/npm/v/svelte-ace)
-[![GitHub license](https://img.shields.io/github/license/nateshmbhat/svelte-ace)](https://github.com/nateshmbhat/svelte-ace/blob/main/LICENSE)
-![GitHub top language](https://img.shields.io/github/languages/top/nateshmbhat/svelte-ace)
-[![](https://img.shields.io/badge/author-nateshmbhat-green.svg)](https://github.com/nateshmbhat)
+<p align="center">
+<a href="https://www.npmjs.com/package/svelte-ace"><img src="https://img.shields.io/npm/v/svelte-ace" alt="Svelte Ace"/>
+<a href="https://github.com/nateshmbhat/svelte-ace"><img src="https://img.shields.io/badge/builtWith-svelte-red" alt="Made with Svelte"/>
+<a href="https://github.com/nateshmbhat/svelte-ace/blob/main/LICENSE"><img src="https://img.shields.io/github/license/nateshmbhat/svelte-ace" alt="License"></a>
+<a href="https://img.shields.io/github/languages/top/nateshmbhat/svelte-ace">
+ <img src="https://img.shields.io/github/languages/top/nateshmbhat/svelte-ace" alt="Discord Badge"></a>
+</p>
 
 <br>
 
-Get proper typescript type completions for ace editor in Svelte.
+### Get proper typescript type completions for ace editor in Svelte.
 
 ### Install :
 
@@ -51,9 +53,9 @@ npm i svelte-ace
   value={text} />
 ```
 
-### Links : 
+### Links :
 
-- NPM  : [npmjs/svelte-ace](https://www.npmjs.com/package/svelte-ace)
+- NPM : [npmjs/svelte-ace](https://www.npmjs.com/package/svelte-ace)
 
 - Home : [github/svelte-ace](https://github.com/nateshmbhat/svelte-ace)
 
@@ -62,6 +64,7 @@ npm i svelte-ace
 ---
 
 ## Explore
+
 - Check out my [svelte-electron-typescript](https://github.com/nateshmbhat/svelte-electron-ts-starter) starter pack.
 
 - Check out my [electron-react-typescript](https://github.com/nateshmbhat/electron-react-ts-starter) starter pack.
