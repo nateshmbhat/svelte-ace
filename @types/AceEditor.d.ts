@@ -27,7 +27,8 @@ interface AceEditorProps {
   height?: string; // null for 100, else integer, used as percent
   width?: string; // null for 100, else integer, used as percent
   options?: any; // Ob
+  readonly?: boolean;
 }
 
-declare class AceEditor extends SvelteComponent<AceEditorProps> {}
+declare class AceEditor extends SvelteComponent<AceEditorProps> { }
 export default AceEditor;

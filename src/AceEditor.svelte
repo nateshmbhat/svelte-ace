@@ -30,6 +30,7 @@
   export let height: string = "100%"; // null for 100, else integer, used as percent
   export let width: string = "100%"; // null for 100, else integer, used as percent
   export let options: any = {}; // Object
+  export let readonly: boolean = false;
 
   let editor: ace.Editor;
   let contentBackup: string = "";
@@ -70,6 +71,13 @@
   function watchOptions(newOption: any) {
     if (editor) {
       editor.setOptions(newOption);
+    }
+  }
+
+  $: watchReadOnlyFlag(readonly);
+  function watchReadOnlyFlag(flag) {
+    if (editor) {
+      editor.setReadOnly(flag);
     }
   }
 
@@ -118,11 +126,20 @@
       dispatch("commandKey", { err, hashId, keyCode });
     editor.onCopy = () => dispatch("copy");
     editor.onCursorChange = () => dispatch("cursorChange");
-    editor.onCut = () => dispatch("cut");
+    editor.onCut = () => {
+      const copyText = editor.getCopyText();
+      console.log("cut event : ", copyText);
+      editor.insert("");
+      dispatch("cut");
+    };
     editor.onDocumentChange = (obj: { data: any }) =>
       dispatch("documentChange", obj);
     editor.onFocus = () => dispatch("focus");
-    editor.onPaste = (text) => dispatch("paste", text);
+    editor.onPaste = (text) => {
+      console.log("paste event : ", text);
+      editor.insert(text);
+      dispatch("paste", text);
+    };
     editor.onSelectionChange = (obj) => dispatch("selectionChange", obj);
     editor.on("change", function () {
       const content = editor.getValue();
