@@ -104,6 +104,7 @@
     editor.getSession().setMode("ace/mode/" + lang);
     editor.setTheme("ace/theme/" + theme);
     editor.setValue(value, 1);
+    editor.setReadOnly(readonly)
     contentBackup = value;
     setEventCallBacks();
     if (options) {
