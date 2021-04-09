@@ -1,7 +1,7 @@
 {
   "name": "svelte-ace",
   "description": "Svelte Ace Editor component with complete TypeScript support",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "author": "Natesh Bhat",
@@ -9,6 +9,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "publish" : "npm run build && npm publish",
     "start": "sirv public --no-clear",
     "validate": "svelte-check"
   },
