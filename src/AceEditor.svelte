@@ -2,9 +2,6 @@
   import { createEventDispatcher, tick, onMount, onDestroy } from "svelte";
   import * as ace from "brace";
   import "brace/ext/emmet";
-  const EDITOR_ID = `svelte-ace-editor-div:${Math.floor(
-    Math.random() * 10000000000
-  )}`;
   const dispatch = createEventDispatcher<{
     init: ace.Editor;
     input: string;
@@ -31,7 +28,7 @@
   export let width: string = "100%"; // null for 100, else integer, used as percent
   export let options: any = {}; // Object
   export let readonly: boolean = false;
-
+  let editorElement: HTMLElement;
   let editor: ace.Editor;
   let contentBackup: string = "";
 
@@ -96,7 +93,7 @@
     lang = lang || "text";
     theme = theme || "chrome";
 
-    editor = ace.edit(EDITOR_ID);
+    editor = ace.edit(editorElement);
 
     dispatch("init", editor);
     editor.$blockScrolling = Infinity;
@@ -152,5 +149,5 @@
 </script>
 
 <div style="width:{px(width)};height:{px(height)}">
-  <div id={EDITOR_ID} style="width:{px(width)};height:{px(height)}" />
+  <div bind:this={editorElement} style="width:{px(width)};height:{px(height)}" />
 </div>
