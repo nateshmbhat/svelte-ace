@@ -28,6 +28,7 @@
   export let width: string = "100%"; // null for 100, else integer, used as percent
   export let options: any = {}; // Object
   export let readonly: boolean = false;
+  export let keybindings: string = null;
   let editorElement: HTMLElement;
   let editor: ace.Editor;
   let contentBackup: string = "";
@@ -145,6 +146,10 @@
       dispatch("input", content);
       contentBackup = content;
     });
+    
+    if (keybindings != null){
+      editor.setKeyboardHandler("ace/keyboard/" + keybindings);
+    }
   }
 </script>
 
